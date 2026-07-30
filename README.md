@@ -22,3 +22,14 @@ A controlled orchestration layer prevents the drafting agent from accessing raw,
 - Auditability and data lineage
 - Progressive scaling from pilot to production
 - Business value measured through productivity, quality, adoption, and risk
+
+## Architecture
+```mermaid
+flowchart TD
+    A["Historical RFPs"] --> B["Agent 1: Sanitization & Compliance"]
+    B --> C["Approved Knowledge Corpus"]
+    D["New Client RFP"] --> E["Agent 2: Retrieval, Synthesis & Drafting"]
+    C --> E
+    E --> F["Human Review and Refinement"]
+    F --> G["Final Submission"]
+```
